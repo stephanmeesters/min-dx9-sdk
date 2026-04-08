@@ -1,7 +1,7 @@
 add_library(d3d9lib INTERFACE)
 
 # Common libraries for all compilers
-target_link_libraries(d3d9lib INTERFACE d3d9 dinput9 dxguid)
+target_link_libraries(d3d9lib INTERFACE d3d9 dinput8 dxguid)
 
 # MSVC-specific configuration
 if(MSVC)
