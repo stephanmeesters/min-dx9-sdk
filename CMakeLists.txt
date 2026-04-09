@@ -16,6 +16,7 @@ if(MSVC)
         target_link_options(d3d9lib INTERFACE /SAFESEH:NO)
     else()
         # VC6 and older MSVC need extra headers - their DirectX SDK is missing newer definitions
+        target_compile_definitions(d3d9lib INTERFACE D3D_DISABLE_9EX)
         target_include_directories(d3d9lib INTERFACE ${CMAKE_CURRENT_SOURCE_DIR}/extra)
     endif()
 endif()
